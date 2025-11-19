@@ -1,0 +1,23 @@
+name: Run Test
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Make test file executable
+      run: chmod +x test/test
+
+    - name: Run test
+      run: ./test/test
+      working-directory: ${{ github.workspace }}
